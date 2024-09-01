@@ -1,0 +1,35 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "serve": "next start -p $PORT",
+    "lint": "next lint",
+    "test": "npx cypress verify & cypress run --component"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.7",
+    "autoprefixer": "^10.4.20",
+    "axios": "^1.7.7",
+    "clsx": "^2.1.1",
+    "cross-env": "^7.0.3",
+    "next": "14.0.4",
+    "postcss": "^8.4.42",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-redux": "^9.1.2",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss": "^3.4.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "cypress": "^13.6.2",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "typescript": "^5.5.4"
+  }
+}
