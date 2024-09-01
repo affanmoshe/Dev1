@@ -1,17 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  Card,
   CardContent,
-  CardDescription,
+  Card,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+  CardDescription,
+} from '@/app/components/ui';
 import RegisterForm from './components/registerForm';
 
-type Props = {};
-
-const RegisterView = (props: Props) => {
+const RegisterView: React.FC = () => {
   return (
     <Card className="mx-auto w-max md:w-full max-w-sm">
       <CardHeader>

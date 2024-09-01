@@ -49,18 +49,6 @@ class AuthAction {
     }
   }
 
-  async verifyEmail(token: string) {
-    try {
-      const decoded: any = sign.verify(token, EMAIL_VERIFICATION_SECRET);
-      const user = await prisma.user.update({
-        where: { email: decoded.email },
-        data: { isVerified: true },
-      });
-      return user;
-    } catch (error) {
-      throw error;
-    }
-  }
 
   async sendVerificationEmail(email: string) {
     try {

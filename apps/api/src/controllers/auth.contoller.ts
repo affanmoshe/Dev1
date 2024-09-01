@@ -3,6 +3,7 @@ import AuthAction from '../actions/auth.action';
 
 class AuthController {
   private authAction: AuthAction;
+  verifyEmail: any;
 
   constructor() {
     this.authAction = new AuthAction();
@@ -28,15 +29,7 @@ class AuthController {
     }
   }
 
-  async verifyEmail(req: Request, res: Response) {
-    try {
-      const { token } = req.query;
-      const user = await this.authAction.verifyEmail(token as string);
-      res.status(200).json(user);
-    } catch (error) {
-      res.status(400).json({ message: "error.message" });
-    }
-  }
+ 
 }
 
 export default AuthController;
